@@ -1,0 +1,36 @@
+package apiRequest;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class GetData {
+	
+	/*
+	 * https://www.youtube.com/watch?v=aqrxDxumKZQ
+	 * https://www.youtube.com/watch?v=7RUzarUREpo
+	 * https://www.youtube.com/watch?v=7YcW25PHnAA
+	 */
+	
+	@Test
+	public void testResponseCode() {
+		
+		Response resp = RestAssured.get("http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+		int code = resp.getStatusCode();
+		System.out.println("Status Code " + code);
+		Assert.assertEquals(code, 200);
+	}
+	
+	@Test
+	public void testCompleteData() {
+		
+		Response resp = RestAssured.get("http://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+		String data = resp.asString();
+		System.out.println("Response data " + data);
+		System.out.println("Response Time " + resp.getTime());
+		
+	}
+
+}

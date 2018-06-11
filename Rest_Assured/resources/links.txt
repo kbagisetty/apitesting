@@ -1,0 +1,21 @@
+//fake api url for practice
+regres.in
+
+//install json-server for as sandbox server
+> npm install -g json-server
+> json-server --watch db.json
+
+//useful websites
+www.apigee.com
+www.rest-assured.io
+www.openweathermap.org/api
+
+//Different api client
+postman
+restlet
+soapui
+
+//dependencies
+RestAssured java class
+TestNG to run individual tests
+Maven for framework

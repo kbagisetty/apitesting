@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;getRequest&apos; to &apos;apiRequest&apos;&#x0D;&#x0A;- Original project: &apos;Rest_Assured&apos;&#x0D;&#x0A;- Original element: &apos;Rest_Assured/src/test/java/getRequest&apos;&#x0D;&#x0A;- Renamed element: &apos;Rest_Assured/src/test/java/apiRequest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;getRequest&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/test\/java&lt;getRequest" name="apiRequest" qualified="false" references="true" stamp="1528721926726" textual="false" version="1.0"/>
+</session>

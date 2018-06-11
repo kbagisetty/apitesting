@@ -1,0 +1,18 @@
+package apiRequest;
+
+import org.testng.Assert;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class PutRequest {
+	
+	RequestSpecification req = RestAssured.given();
+	req.
+	
+	Response resp = req.put("http://localhost:3000/posts/25");
+	int code = resp.getStatusCode();
+	//Assert.assertEquals(code, 200);
+
+}

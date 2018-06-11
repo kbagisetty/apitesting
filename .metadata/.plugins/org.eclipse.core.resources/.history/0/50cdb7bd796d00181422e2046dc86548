@@ -1,0 +1,31 @@
+package apiRequest;
+
+import org.json.simple.JSONObject;
+import org.testng.annotations.Test;
+import org.testng.asserts.*;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+
+public class PostRequest{
+	
+	@Test
+	public void postTest(){
+		
+		RequestSpecification req = RestAssured.given();		
+		req.header("Content-Type", "application/json");
+		JSONObject jsono = new JSONObject();
+		jsono.put("id", "25");
+		jsono.put("title", "Selenium-server");
+		jsono.put("author", "api-automation");
+		
+		req.body(jsono.toJSONString());
+		Response resp = req.post("http:/localhost:3000/posts");
+		int code = resp.getStatusCode();
+		Assert.assertEquals(code, 201);
+		
+		
+	}
+
+}
